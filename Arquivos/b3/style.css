@@ -41,6 +41,7 @@ img{
     grid-row: 3;
 }
 
+
 #divImagem div:nth-child(n+10) {
     grid-column: 3;
     grid-row: 3;
