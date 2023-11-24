@@ -1,66 +1,101 @@
-@keyframes spinning {
+*{
+    box-sizing: border-box;
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 200px;
+}
+
+@keyframes girar {
 
     from {
         transform: rotate(0deg);
     }
-
+    
     to {
+        transform: rotate(1080deg);
+    }
+}
+
+#triangle{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid yellow;
+    position: relative;
+
+    /* animation: girar 4s linear infinite; */
+
+}
+
+#triangle::before{
+    content: " ";
+
+    display: block;
+
+    position: absolute;
+    top: 80px;
+    left: -200px;
+
+    width: 0; 
+    height: 0; 
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+
+    transform: 
+        rotate(26.5deg);
+    
+    border-bottom: 100px solid yellow;
+
+}
+
+#triangle::after{
+    content: " ";
+
+    display: block;
+
+    position: absolute;
+    top: 80px;
+    left: -200px;
+
+    width: 0; 
+    height: 0; 
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+
+    transform: 
+        rotate(-26.5deg);
+    
+    border-bottom: 100px solid yellow;
+}
+
+@keyframes girar {
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
         transform: rotate(360deg);
     }
     
 }
 
+#gira{
 
-* {
-    box-sizing: border-box;
-}
+    height: 400px;
+    width: 400px;
 
-body div {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
+    align-items: start;
 
-.estrela {
-    margin: 100px;
-    position: relative;
-    display: block;
-    width: 0px;
-    height: 0px;
-    border-right: 100px solid transparent;
-    border-bottom: 70px solid yellow;
-    border-left: 100px solid transparent;
-    transform: rotate(35deg);
 
-    animation-name: spinning;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-.estrela:before {
-    border-bottom: 80px solid yellow;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    position: absolute;
-    height: 0;
-    width: 0;
-    top: -45px;
-    left: -65px;
-    display: block;
-    content: " ";
-    transform: rotate(-35deg);
-}
-
-.estrela:after {
-    position: absolute;
-    display: block;
-    top: 3px;
-    left: -105px;
-    width: 0px;
-    height: 0px;
-    border-right: 100px solid transparent;
-    border-bottom: 70px solid yellow;
-    border-left: 100px solid transparent;
-    transform: rotate(-70deg);
-    content: " ";
+    animation: girar 4s linear infinite ;
 }
