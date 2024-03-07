@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Mont-Regular';
+    src: url("./fonts/Montserrat-Regular.ttf");
+}@font-face {
+    font-family: 'Mont-Bold';
+    src: url("./fonts/Montserrat-Bold.ttf");
+}@font-face {
+    font-family: 'Mont-Medium';
+    src: url("./fonts/Montserrat-Medium.ttf");
+}
+
+
+.home{
+    margin:5px;
+    padding: 2rem;
+    background:linear-gradient(
+    135deg, #2c4678 0%, #c8daff 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+input{
+    background-color: red;
+}
+
+h1{
+    font-family: Mont-Regular;
+    font-size: 64px;
+    color: #2c4678;
+}
+
+.paragraph{
+    font-family: Mont-Regular;
+    font-size: 18px;
+    font-weight: 100;
+    color:white;
+    text-align: center;
+}
+
+img{
+    width: 100px;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin:0 auto;
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow: auto;
+    overscroll-behavior-x: none;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: center;
+    object-fit: cover;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    top:3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #2c4678;
+    opacity: 0.75;
+    transition: opacity ease 250ms,background-color ease 1s;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+    background-color: whitesmoke;
+}

@@ -45,6 +45,10 @@ img{
 #divImagem div:nth-child(n+10) {
     grid-column: 3;
     grid-row: 3;
-    filter: opacity(50%);
+    filter: opacity(50%) drop-shadow(black 0 0 4px);
 }
 
+#divImagem div:nth-child(10)::after {
+    content: "+1";
+
+}
